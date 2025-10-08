@@ -45,4 +45,16 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+
+    implementation("com.squareup.retrofit2:retrofit:3.0.0")
+
+    // Retrofit Converter (Örneğin Gson)
+    implementation("com.squareup.retrofit2:converter-gson:3.0.0")
+
+    // AndroidX RecyclerView
+    implementation("androidx.recyclerview:recyclerview:1.4.0") // adapter-rxjava2 olarak kalır
+    implementation("io.reactivex.rxjava2:rxjava:2.2.21")
+    implementation("io.reactivex.rxjava2:rxandroid:2.1.1")
+    implementation("androidx.recyclerview:recyclerview:1.4.0")
 }
