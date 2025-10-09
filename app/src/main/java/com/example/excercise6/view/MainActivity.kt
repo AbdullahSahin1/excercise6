@@ -37,7 +37,7 @@ import retrofit2.converter.gson.GsonConverterFactory
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
-        val service = retrofit.create(CryptoAPI::class.java)
+        /*val service = retrofit.create(CryptoAPI::class.java)
         val call = service.getData()
         call.enqueue(object: Callback<List<CryptoModel>>{
             override fun onResponse(call: Call<List<CryptoModel>?>, response: Response<List<CryptoModel>?>) {
@@ -63,5 +63,5 @@ import retrofit2.converter.gson.GsonConverterFactory
 
      override fun onItemClick(cryptoModel: CryptoModel) {
          Toast.makeText(this,"clicek: ${cryptoModel.currency}", Toast.LENGTH_LONG).show()
-     }
+     }*/
  }
