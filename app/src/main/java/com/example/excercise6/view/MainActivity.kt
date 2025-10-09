@@ -41,6 +41,17 @@ import retrofit2.converter.gson.GsonConverterFactory
         val service = retrofit.create(CryptoAPI::class.java)
         job = CoroutineScope(Dispatchers.IO).launch{
           val response = retrofit.getData()
+           withContext(Dispatchers.Main){
+            if(response.isSuccesful){
+              response.body()?.let{
+               cryptoModels = ArrayList(it)
+               cryptoModels.let{
+                recyclerViewAdapter = recyclerViewAdapter(it,this@MainActivity)
+                recyclerView.adapter = recyclerViewAdapter
+               }
+              }
+            }
+           }
         }
         
        /* val call = service.getData()
