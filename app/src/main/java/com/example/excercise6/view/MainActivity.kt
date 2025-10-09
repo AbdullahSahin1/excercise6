@@ -75,9 +75,15 @@ import retrofit2.converter.gson.GsonConverterFactory
             }
 
         })
-    }
+    }*/
 
      override fun onItemClick(cryptoModel: CryptoModel) {
          Toast.makeText(this,"clicek: ${cryptoModel.currency}", Toast.LENGTH_LONG).show()
-     }*/
+     }
+
+     override fun OnDestroy(){
+      super.onDestroy()
+      job?.cancel()
+     }
+     
  }
