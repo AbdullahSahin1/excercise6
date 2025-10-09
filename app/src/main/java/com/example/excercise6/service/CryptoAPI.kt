@@ -9,5 +9,5 @@ interface CryptoAPI {
     //https://v6.exchangerate-api.com/v6/
     // 8033422ecd3ea995431cf214/latest/USD
     @GET("8033422ecd3ea995431cf214/latest/USD")
-    fun getData(): Call<List<CryptoModel>>
+    suspend fun getData(): Call<List<CryptoModel>>
 }
