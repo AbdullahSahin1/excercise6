@@ -21,6 +21,7 @@ import retrofit2.converter.gson.GsonConverterFactory
     private val BASE_URL = "https://v6.exchangerate-api.com/v6/"
     private var cryptoModels : ArrayList<CryptoModel>? = null
     private var recyclerViewAdapter : RecyclerViewAdapter? = null
+  private var Job: Job? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -38,6 +39,7 @@ import retrofit2.converter.gson.GsonConverterFactory
             .addConverterFactory(GsonConverterFactory.create())
             .build()
         val service = retrofit.create(CryptoAPI::class.java)
+        
        /* val call = service.getData()
         call.enqueue(object: Callback<List<CryptoModel>>{
             override fun onResponse(call: Call<List<CryptoModel>?>, response: Response<List<CryptoModel>?>) {
