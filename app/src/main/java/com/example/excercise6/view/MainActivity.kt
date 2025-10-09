@@ -37,8 +37,8 @@ import retrofit2.converter.gson.GsonConverterFactory
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
-        /*val service = retrofit.create(CryptoAPI::class.java)
-        val call = service.getData()
+        val service = retrofit.create(CryptoAPI::class.java)
+       /* val call = service.getData()
         call.enqueue(object: Callback<List<CryptoModel>>{
             override fun onResponse(call: Call<List<CryptoModel>?>, response: Response<List<CryptoModel>?>) {
                 if(response.isSuccessful){
