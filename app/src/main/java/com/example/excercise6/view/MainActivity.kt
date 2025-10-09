@@ -39,6 +39,9 @@ import retrofit2.converter.gson.GsonConverterFactory
             .addConverterFactory(GsonConverterFactory.create())
             .build()
         val service = retrofit.create(CryptoAPI::class.java)
+        job = CoroutineScope(Dispatchers.IO).launch{
+          val response = retrofit.getData()
+        }
         
        /* val call = service.getData()
         call.enqueue(object: Callback<List<CryptoModel>>{
